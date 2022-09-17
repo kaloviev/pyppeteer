@@ -46,7 +46,7 @@ downloadURLs = {
 }
 
 chromiumExecutable = {
-    'linux': os.getenv('CHROMIUM_EXEC_PATH'),
+    'linux': Path(os.getenv('CHROMIUM_EXEC_PATH')),
     'mac': (DOWNLOADS_FOLDER / REVISION / 'chrome-mac' / 'Chromium.app' / 'Contents' / 'MacOS' / 'Chromium'),
     'win32': DOWNLOADS_FOLDER / REVISION / windowsArchive / 'chrome.exe',
     'win64': DOWNLOADS_FOLDER / REVISION / windowsArchive / 'chrome.exe',
