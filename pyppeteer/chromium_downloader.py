@@ -46,7 +46,7 @@ downloadURLs = {
 }
 
 chromiumExecutable = {
-    'linux': Path(os.getenv('CHROMIUM_EXEC_PATH')),
+    'linux': DOWNLOADS_FOLDER / REVISION / 'chrome-linux' / 'chrome',
     'mac': (DOWNLOADS_FOLDER / REVISION / 'chrome-mac' / 'Chromium.app' / 'Contents' / 'MacOS' / 'Chromium'),
     'win32': DOWNLOADS_FOLDER / REVISION / windowsArchive / 'chrome.exe',
     'win64': DOWNLOADS_FOLDER / REVISION / windowsArchive / 'chrome.exe',
@@ -146,4 +146,5 @@ def chromium_executable() -> Path:
 
 def check_chromium() -> bool:
     """Check if chromium is placed at correct path."""
-    return chromium_executable().exists()
+    # return chromium_executable().exists()
+    return True
